@@ -1,10 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\SkiShop\\SkiShop.API\\",
+  "WorkspaceRootPath": "F:\\SkiShop-Project\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|F:\\SkiShop\\SkiShop.API\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\SkiShop\\SkiShop.API\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,13 +32,11 @@
               "DocumentIndex": 0,
               "Title": ".gitignore",
               "DocumentMoniker": "F:\\SkiShop\\SkiShop.API\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
+              "RelativeDocumentMoniker": "..\\..\\SkiShop\\SkiShop.API\\.gitignore",
               "ToolTip": "F:\\SkiShop\\SkiShop.API\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAPAAAAAAAAAA==",
+              "RelativeToolTip": "..\\..\\SkiShop\\SkiShop.API\\.gitignore",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-17T19:03:09.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T19:03:09.006Z"
             }
           ]
         }
