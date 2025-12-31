@@ -41,10 +41,10 @@ namespace SkiShop.API
                 return ConnectionMultiplexer.Connect(configration);
             });
             builder.Services.AddSingleton<ICartService, CartService>();
-            builder.Services.AddAuthorization();
+           
             builder.Services.AddIdentityApiEndpoints<AppUser>()
                 .AddEntityFrameworkStores<StoreContext>();
-                
+            builder.Services.AddScoped<IPaymentService, PaymentService>();
 
             var app = builder.Build();
 
@@ -60,11 +60,18 @@ namespace SkiShop.API
             app.UseAuthorization();
 
             app.UseMiddleware<ExceptionMiddleware>();
-            app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowCredentials()
-            .WithOrigins("https://localhost:4200", "http://localhost:4200"));
+
+            app.UseCors(x => x
+        .WithOrigins("https://localhost:4200", "http://localhost:4200")
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        .AllowCredentials());
+
             app.MapControllers();
+
             app.MapGroup("api").MapIdentityApi<AppUser>(); // API/login
 
+            builder.Services.AddAuthorization();
             try
             {
                 using var scope = app.Services.CreateScope();
