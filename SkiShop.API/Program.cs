@@ -16,7 +16,7 @@ namespace SkiShop.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            // Add services to the container.hhh
 
             builder.Services.AddControllers();
 
