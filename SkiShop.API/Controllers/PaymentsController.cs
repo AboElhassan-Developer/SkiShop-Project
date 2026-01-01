@@ -9,7 +9,7 @@ namespace SkiShop.API.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class PaymentsController(IPaymentService paymentService,
-        IGenericRepository<DeliveryMethod> dmRepo) : BaseApiController
+       IUnitOfWork unit) : BaseApiController
     {
         [Authorize]
         [HttpPost("{cartId}")]
@@ -23,7 +23,7 @@ namespace SkiShop.API.Controllers
         [HttpGet("delivery-methods")]
         public async Task<ActionResult<IReadOnlyList<DeliveryMethod>>> GetDeliveryMethods()
         {
-            var methods = await dmRepo.ListAllAsync();
+            var methods = await unit.Repository<DeliveryMethod>().ListAllAsync();
             return Ok(methods);
 
         }
