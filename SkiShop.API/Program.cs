@@ -73,14 +73,17 @@ namespace SkiShop.API
             app.UseAuthentication();
             app.UseAuthorization();
 
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
 
             app.MapControllers();
 
             app.MapGroup("api").MapIdentityApi<AppUser>(); // API/login
 
             app.MapHub<NotificationHub>("/hub/notifications");
-
-            builder.Services.AddAuthorization();
+            app.MapFallbackToFile("index.html");
+            //builder.Services.AddAuthorization();
             try
             {
                 using var scope = app.Services.CreateScope();
